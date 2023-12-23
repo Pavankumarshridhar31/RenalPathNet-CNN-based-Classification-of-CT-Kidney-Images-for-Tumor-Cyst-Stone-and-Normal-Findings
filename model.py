@@ -119,7 +119,7 @@ model.add(Flatten())
 model.add(Dense(256, activation='relu'))
 model.add(Dropout(0.5))
 
-model.add(Dense(4, activation='softmax'))  # Assuming you have 4 classes
+model.add(Dense(4, activation='softmax'))  #  4 classes
 
 model.summary()
 
@@ -187,7 +187,7 @@ print("Number of Classes:", num_classes)
 # Make predictions
 predictions = model.predict(test_ctdataset)
 
-# Convert predictions to class labels (assuming one-hot encoding)
+# Convert predictions to class labels (one-hot encoding)
 predicted_labels = np.argmax(predictions, axis=1)
 
 # Ensure 'test_ctdataset.classes' is in the correct format (1D array)
@@ -210,7 +210,7 @@ predictions = model.predict(test_ctdataset)
 # Convert predictions to class labels (assuming one-hot encoding)
 predicted_labels = np.argmax(predictions, axis=1)
 
-# Ensure 'test_ctdataset.classes' is in the correct format (1D array)
+
 actual_labels = test_ctdataset.classes
 
 # Calculate confusion matrix
